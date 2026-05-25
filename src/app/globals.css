@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cgc-black text-zinc-100 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .font-display {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .grain {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-cgc-orange px-6 py-3
+           font-semibold text-cgc-black transition hover:bg-cgc-orangeLight
+           focus:outline-none focus:ring-2 focus:ring-cgc-orange focus:ring-offset-2
+           focus:ring-offset-cgc-black disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-zinc-700
+           bg-transparent px-6 py-3 font-semibold text-zinc-100 transition
+           hover:border-zinc-400 hover:bg-zinc-900 focus:outline-none focus:ring-2
+           focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-cgc-black
+           disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm
+           text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-100;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-zinc-800 bg-cgc-carbon px-4 py-3 text-zinc-100
+           placeholder-zinc-500 transition focus:border-cgc-orange focus:outline-none
+           focus:ring-1 focus:ring-cgc-orange;
+  }
+
+  .card {
+    @apply rounded-xl border border-zinc-800 bg-cgc-carbon p-6;
+  }
+}
